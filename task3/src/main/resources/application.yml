@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: task3
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+    username: user
+    password: password

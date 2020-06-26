@@ -1,0 +1,15 @@
+version: '3'
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: es01
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+  task4:
+    image: mindal/task4
+    ports:
+      - 8080:8080
+    depends_on:
+      - es
