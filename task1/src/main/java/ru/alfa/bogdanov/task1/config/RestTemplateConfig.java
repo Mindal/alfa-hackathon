@@ -17,12 +17,13 @@ import java.security.KeyStore;
 @Configuration
 public class RestTemplateConfig {
 
+
     @Bean
     public RestTemplate restTemplate() throws Exception {
         RestTemplate restTemplate = new RestTemplate();
 
         KeyStore keyStore = KeyStore.getInstance("jks");
-        InputStream inputStream = new ClassPathResource("nt-gateway.jks").getInputStream();
+        InputStream inputStream = new ClassPathResource("alfabattle.jks").getInputStream();
 
         keyStore.load(inputStream, "password".toCharArray());
 
